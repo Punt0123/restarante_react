@@ -1,0 +1,455 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf2;
+  color: #333;
+}
+
+.navbar {
+  background: #8b0000;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+.hero {
+  min-height: 500px;
+  background:
+    linear-gradient(#0008, #0008),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554")
+    center/cover;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn {
+  background: #e6a700;
+  color: #222;
+  padding: 14px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.menu {
+  padding: 65px 7%;
+  text-align: center;
+}
+
+.menu h2,
+.nosotros h2,
+.contacto h2 {
+  color: #8b0000;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.platos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.plato-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #0002;
+  padding-bottom: 20px;
+}
+
+.plato-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.plato-card h3 {
+  margin: 15px;
+}
+
+.precio {
+  color: #8b0000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.plato-card button,
+.contacto button {
+  background: #8b0000;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nosotros {
+  background: #f3e1c5;
+  text-align: center;
+  padding: 65px 12%;
+  line-height: 1.8;
+}
+
+.contacto {
+  padding: 65px 7%;
+  text-align: center;
+}
+
+.contacto form {
+  max-width: 500px;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contacto textarea {
+  min-height: 120px;
+}
+
+.footer {
+  background: #650000;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  line-height: 2;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+
+.navbar {
+  background: #8b0000;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-login {
+  margin-left: auto;
+}
+
+.btn-login,
+.nav-login button {
+  background: #e6a700;
+  color: #650000;
+  padding: 12px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-login:hover,
+.nav-login button:hover {
+  background: #ffd45c;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-login {
+    margin: 5px auto;
+  }
+}
+
+
+
+/* ===== LOGIN SABOR CRIOLLO ===== */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      rgba(30, 10, 5, 0.65),
+      rgba(30, 10, 5, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554")
+    center/cover no-repeat;
+}
+
+.login-card {
+  background: #fffaf2;
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  animation: aparecer 0.7s ease;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-logo span {
+  font-size: 48px;
+}
+
+.login-logo h1 {
+  color: #8b0000;
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.login-logo p {
+  color: #b58a32;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-heading h2 {
+  color: #4b2118;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.login-heading p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #4b2118;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd0bd;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #8b0000;
+  box-shadow: 0 0 5px #8b000055;
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #666;
+  font-size: 13px;
+}
+
+.show-password input {
+  accent-color: #8b0000;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: #650000;
+  transform: translateY(-2px);
+}
+
+.login-register {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 25px;
+  color: #666;
+}
+
+.login-register a {
+  color: #8b0000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+.login-back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #8b0000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login-footer {
+  border-top: 1px solid #eadfce;
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 25px;
+  color: #999;
+  font-size: 11px;
+}
+
+.login-error {
+  color: #b00020;
+  background: #ffe5e5;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 22px;
+  }
+
+  .login-logo h1 {
+    font-size: 25px;
+  }
+}
